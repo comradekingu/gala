@@ -261,11 +261,12 @@ namespace Gala
 				icon_groups.set_easing_duration (200);
 			}
 
+			var scale = InternalUtils.get_scale_factor ();
 			// make sure the active workspace's icongroup is always visible
 			var icon_groups_width = icon_groups.calculate_total_width ();
 			if (icon_groups_width > width) {
-				icon_groups.x = (-active_index * (IconGroupContainer.SPACING + IconGroup.SIZE) + width / 2)
-					.clamp (width - icon_groups_width - 64, 64);
+				icon_groups.x = (-active_index * (IconGroupContainer.SPACING * scale + IconGroup.SIZE * scale) + width / 2)
+					.clamp (width - icon_groups_width - 64 * scale, 64 * scale);
 			} else
 				icon_groups.x = width / 2 - icon_groups_width / 2;
 
@@ -472,7 +473,8 @@ namespace Gala
 				show ();
 				grab_key_focus ();
 
-				icon_groups.y = height - WorkspaceClone.BOTTOM_OFFSET + 20;
+				var scale = InternalUtils.get_scale_factor ();
+				icon_groups.y = height - WorkspaceClone.BOTTOM_OFFSET * scale + 20 * scale;
 			} else {
 				DragDropAction.cancel_all_by_id ("multitaskingview-window");
 			}

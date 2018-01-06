@@ -550,5 +550,13 @@ namespace Gala
 			result.reverse ();
 			return result;
 		}*/
+
+		public static int get_scale_factor () {
+#if HAS_MUTTER326
+			return Meta.Backend.get_backend ().get_settings ().get_ui_scaling_factor ();
+#else
+			return 1;
+#endif		
+		}
 	}
 }
