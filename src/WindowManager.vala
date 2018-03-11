@@ -923,7 +923,7 @@ namespace Gala
 		public override void size_change (Meta.WindowActor actor, Meta.SizeChange which_change, Meta.Rectangle old_frame_rect, Meta.Rectangle old_buffer_rect)
 		{
 			var new_rect = actor.get_meta_window ().get_frame_rect ();
-
+			
 			switch (which_change) {
 				case Meta.SizeChange.MAXIMIZE:
 					maximize (actor, new_rect.x, new_rect.y, new_rect.width, new_rect.height);
@@ -944,7 +944,7 @@ namespace Gala
 		{
 			unowned AnimationSettings animation_settings = AnimationSettings.get_default ();
 			var duration = animation_settings.minimize_duration;
-
+			
 			if (!animation_settings.enable_animations
 				|| duration == 0
 				|| actor.get_meta_window ().window_type != WindowType.NORMAL) {
@@ -1166,7 +1166,7 @@ namespace Gala
 						var outer_rect = window.get_frame_rect ();
 						actor.set_position (outer_rect.x, outer_rect.y);
 					}
-
+					
 					actor.set_pivot_point (0.5f, 1.0f);
 					actor.set_scale (0.01f, 0.1f);
 					actor.opacity = 0;
