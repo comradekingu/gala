@@ -162,7 +162,9 @@ namespace Gala
 				return true;
 			});
 
-			window_icon = new WindowIcon (window, WINDOW_ICON_SIZE);
+			var scale = InternalUtils.get_ui_scaling_factor ();
+
+			window_icon = new WindowIcon (window, WINDOW_ICON_SIZE, scale);
 			window_icon.opacity = 0;
 			window_icon.set_pivot_point (0.5f, 0.5f);
 

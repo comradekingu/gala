@@ -155,7 +155,8 @@ namespace Gala
 		 */
 		void fade_new_icon ()
 		{
-			var new_icon = new WindowIcon (window, icon_size);
+			var scale = InternalUtils.get_ui_scaling_factor ();
+			var new_icon = new WindowIcon (window, icon_size, scale);
 			new_icon.add_constraint (new BindConstraint (this, BindCoordinate.SIZE, 0));
 			new_icon.opacity = 0;
 
