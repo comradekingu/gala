@@ -76,7 +76,7 @@ namespace Gala
 		 */
 		public float calculate_total_width ()
 		{
-			var scale = InternalUtils.get_scale_factor ();
+			var scale = InternalUtils.get_ui_scaling_factor ();
 			var spacing = SPACING * scale;
 			var group_width = GROUP_WIDTH * scale;
 
@@ -109,4 +109,3 @@ namespace Gala
 		}
 	}
 }
-

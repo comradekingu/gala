@@ -261,7 +261,7 @@ namespace Gala
 				icon_groups.set_easing_duration (200);
 			}
 
-			var scale = InternalUtils.get_scale_factor ();
+			var scale = InternalUtils.get_ui_scaling_factor ();
 			// make sure the active workspace's icongroup is always visible
 			var icon_groups_width = icon_groups.calculate_total_width ();
 			if (icon_groups_width > width) {
@@ -473,7 +473,7 @@ namespace Gala
 				show ();
 				grab_key_focus ();
 
-				var scale = InternalUtils.get_scale_factor ();
+				var scale = InternalUtils.get_ui_scaling_factor ();
 				icon_groups.y = height - WorkspaceClone.BOTTOM_OFFSET * scale + 20 * scale;
 			} else {
 				DragDropAction.cancel_all_by_id ("multitaskingview-window");
@@ -596,4 +596,3 @@ namespace Gala
 		}
 	}
 }
-

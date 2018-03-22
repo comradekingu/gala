@@ -96,7 +96,7 @@ namespace Gala
 
 		construct
 		{
-			var scale = InternalUtils.get_scale_factor ();
+			var scale = InternalUtils.get_ui_scaling_factor ();
 			var size = SIZE * scale;
 
 			width = size;
@@ -218,7 +218,7 @@ namespace Gala
 				return;
 			}
 
-			var scale = InternalUtils.get_scale_factor ();
+			var scale = InternalUtils.get_ui_scaling_factor ();
 			var width = 100 * scale;
 			var x = ((SIZE * scale) - width) / 2;
 			var y = -10;
@@ -339,7 +339,7 @@ namespace Gala
 		 */
 		bool draw (Cairo.Context cr)
 		{
-			var scale = InternalUtils.get_scale_factor ();
+			var scale = InternalUtils.get_ui_scaling_factor ();
 
 			cr.set_operator (Cairo.Operator.CLEAR);
 			cr.paint ();
@@ -477,4 +477,3 @@ namespace Gala
 		}
 	}
 }
-

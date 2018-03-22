@@ -297,7 +297,7 @@ namespace Gala
 			var screen = workspace.get_screen ();
 			var display = screen.get_display ();
 
-			var scale_factor = InternalUtils.get_scale_factor ();
+			var scale_factor = InternalUtils.get_ui_scaling_factor ();
 
 			var monitor = screen.get_monitor_geometry (screen.get_primary_monitor ());
 			var scale = (float)(monitor.height - TOP_OFFSET * scale_factor - BOTTOM_OFFSET * scale_factor) / monitor.height;
@@ -339,7 +339,7 @@ namespace Gala
 		{
 			if (!opened)
 				return;
-			
+
 			opened = false;
 
 			background.save_easing_state ();
@@ -352,4 +352,3 @@ namespace Gala
 		}
 	}
 }
-
