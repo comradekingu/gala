@@ -66,7 +66,7 @@ namespace Gala
 			destroy_all_children ();
 
 			var scale = InternalUtils.get_ui_scaling_factor ();
-			var icon = new WindowIcon (window, IconGroupContainer.GROUP_WIDTH * scale);
+			var icon = new WindowIcon (window, IconGroupContainer.GROUP_WIDTH, scale);
 			icon.x = IconGroupContainer.SPACING;
 			icon.x_align = ActorAlign.CENTER;
 			add_child (icon);
