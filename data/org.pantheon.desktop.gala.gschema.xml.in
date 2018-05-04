@@ -9,6 +9,14 @@
 		<value nick="custom-command" value="5" />
 		<value nick="window-overview" value="6" />
 		<value nick="window-overview-all" value="7" />
+		<value nick="start-move-current" value="8" />
+		<value nick="start-resize-current" value="9" />
+		<value nick="toggle-always-on-top-current" value="10" />
+		<value nick="toggle-always-on-visible-workspace-current" value="11" />
+		<value nick="move-current-workspace-left" value="12" />
+		<value nick="move-current-workspace-right" value="13" />
+		<value nick="close-current" value="14" />
+		<value nick="switch-to-workspace-last" value="15" />
 	</enum>
 	<enum id="GalaWindowOverviewType">
 		<value nick='grid' value='0'/>
