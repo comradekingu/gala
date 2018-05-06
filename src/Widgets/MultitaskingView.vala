@@ -223,13 +223,14 @@ namespace Gala
 		 */
 		void update_positions (bool animate)
 		{
+			var scale = InternalUtils.get_ui_scaling_factor ();
 			var active_index = screen.get_active_workspace ().index ();
 			var active_x = 0.0f;
 
 			foreach (var child in workspaces.get_children ()) {
 				unowned WorkspaceClone workspace_clone = (WorkspaceClone) child;
 				var index = workspace_clone.workspace.index ();
-				var dest_x = index * (workspace_clone.width - 150);
+				var dest_x = index * (workspace_clone.width - (150 * scale));
 
 				if (index == active_index) {
 					active_x = dest_x;
