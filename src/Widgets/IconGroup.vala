@@ -350,7 +350,7 @@ namespace Gala
 			// single icon => big icon
 			if (n_windows == 1) {
 				var icon = (WindowIconActor) icon_container.get_child_at_index (0);
-				icon.place (0, 0, 64 * scale);
+				icon.place (0, 0, 64);
 
 				return false;
 			}
@@ -417,9 +417,9 @@ namespace Gala
 
 			int size;
 			if (n_windows < 5)
-				size = 24 * scale;
+				size = 24;
 			else
-				size = 16 * scale;
+				size = 16;
 
 			var n_tiled_windows = uint.min (n_windows, 9);
 			var columns = (int) Math.ceil (Math.sqrt (n_tiled_windows));
@@ -427,8 +427,8 @@ namespace Gala
 
 			int spacing = 6 * scale;
 
-			var width = columns * size + (columns - 1) * spacing;
-			var height = rows * size + (rows - 1) * spacing;
+			var width = columns * (size * scale) + (columns - 1) * spacing;
+			var height = rows * (size * scale) + (rows - 1) * spacing;
 			var x_offset = SIZE * scale / 2 - width / 2;
 			var y_offset = SIZE * scale / 2 - height / 2;
 
@@ -466,10 +466,10 @@ namespace Gala
 
 				window.place (x, y, size);
 
-				x += size + spacing;
-				if (x + size >= SIZE * scale) {
+				x += (size * scale) + spacing;
+				if (x + (size * scale) >= SIZE * scale) {
 					x = x_offset;
-					y += size + spacing;
+					y += (size * scale) + spacing;
 				}
 			}
 

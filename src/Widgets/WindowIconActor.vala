@@ -42,9 +42,10 @@ namespace Gala
 				if (value == _icon_size)
 					return;
 
+				var scale = InternalUtils.get_ui_scaling_factor ();
 				_icon_size = value;
 
-				set_size (_icon_size, _icon_size);
+				set_size (_icon_size * scale, _icon_size * scale);
 
 				fade_new_icon ();
 			}
