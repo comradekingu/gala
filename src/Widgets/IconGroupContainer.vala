@@ -84,7 +84,7 @@ namespace Gala
 			foreach (var child in get_children ()) {
 				if (child is WorkspaceInsertThumb) {
 					if (((WorkspaceInsertThumb) child).expanded)
-						width += group_width + spacing;
+						width += group_width + spacing * 2;
 					else
 						width += spacing;
 				} else
