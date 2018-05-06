@@ -356,7 +356,14 @@ namespace Gala
 			}
 
 			// more than one => we need a folder
-			Granite.Drawing.Utilities.cairo_rounded_rectangle (cr, 0.5, 0.5, (int) width - 1, (int) height - 1, 5);
+			Granite.Drawing.Utilities.cairo_rounded_rectangle (
+				cr,
+				0.5 * scale,
+				0.5 * scale,
+				(int) width - (1 * scale),
+				(int) height - (1 * scale),
+				5 * scale
+			);
 
 			cr.set_source_rgba (0, 0, 0, 0.1);
 			cr.fill_preserve ();
@@ -370,7 +377,14 @@ namespace Gala
 			cr.set_source (grad);
 			cr.stroke ();
 
-			Granite.Drawing.Utilities.cairo_rounded_rectangle (cr, 1.5, 1.5, (int) width - 3, (int) height - 3, 5);
+			Granite.Drawing.Utilities.cairo_rounded_rectangle (
+				cr,
+				1.5 * scale,
+				1.5 * scale,
+				(int) width - (3 * scale),
+				(int) height - (3 * scale),
+				5 * scale
+			);
 
 			cr.set_source_rgba (0, 0, 0, 0.3);
 			cr.stroke ();
