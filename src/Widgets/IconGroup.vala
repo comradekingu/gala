@@ -361,7 +361,7 @@ namespace Gala
 			cr.set_source_rgba (0, 0, 0, 0.1);
 			cr.fill_preserve ();
 
-			cr.set_line_width (1);
+			cr.set_line_width (1 * scale);
 
 			var grad = new Cairo.Pattern.linear (0, 0, 0, height);
 			grad.add_color_stop_rgba (0.8, 0, 0, 0, 0);
